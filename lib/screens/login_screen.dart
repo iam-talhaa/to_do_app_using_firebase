@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:to_do_app/screens/sign_up_screen.dart';
 
 class login_screen extends StatefulWidget {
   const login_screen({super.key});
@@ -55,7 +56,10 @@ class _login_screenState extends State<login_screen> {
                   'Not Register yet!',
                 ),
                 TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.of(context).push(MaterialPageRoute(
+                          builder: (BuildContext context) => sign_up_screen()));
+                    },
                     child: Text(
                       'REGISTER',
                       style: TextStyle(color: Colors.blue),

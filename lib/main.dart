@@ -15,6 +15,7 @@ class TO_DO_APP extends StatefulWidget {
 class _TO_DO_APPState extends State<TO_DO_APP> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(home: loading_screen());
+    return MaterialApp(
+        debugShowCheckedModeBanner: false, home: loading_screen());
   }
 }

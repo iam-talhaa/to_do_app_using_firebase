@@ -16,8 +16,9 @@ class _loading_screenState extends State<loading_screen> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           FlutterLogo(
-            size: 50,
+            size: 100,
           ),
+          SizedBox(height: 20),
           Center(
             child: ElevatedButton(
                 onPressed: () {
