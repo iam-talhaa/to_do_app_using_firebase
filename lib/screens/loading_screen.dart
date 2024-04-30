@@ -13,18 +13,21 @@ class _loading_screenState extends State<loading_screen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           FlutterLogo(
             size: 50,
           ),
-          ElevatedButton(
-              onPressed: () {
-                Navigator.of(context)
-                    .pushReplacement(MaterialPageRoute(builder: (context) {
-                  return login_screen();
-                }));
-              },
-              child: Text('ENTER'))
+          Center(
+            child: ElevatedButton(
+                onPressed: () {
+                  Navigator.of(context)
+                      .pushReplacement(MaterialPageRoute(builder: (context) {
+                    return login_screen();
+                  }));
+                },
+                child: Text('ENTER')),
+          )
         ],
       ),
     );
