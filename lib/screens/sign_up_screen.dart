@@ -8,6 +8,11 @@ class sign_up_screen extends StatefulWidget {
 }
 
 class _sign_up_screenState extends State<sign_up_screen> {
+  var s_fullNameController = TextEditingController();
+  var s_email_Controller = TextEditingController();
+  var s_confirmPasswordController = TextEditingController();
+  var s_passwordController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -24,6 +29,7 @@ class _sign_up_screenState extends State<sign_up_screen> {
           Padding(
             padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
             child: TextFormField(
+              controller: s_fullNameController,
               decoration: InputDecoration(
                   hintText: 'Full Name ',
                   border: OutlineInputBorder(
@@ -34,6 +40,7 @@ class _sign_up_screenState extends State<sign_up_screen> {
           Padding(
             padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
             child: TextFormField(
+              controller: s_email_Controller,
               decoration: InputDecoration(
                   hintText: 'Email',
                   border: OutlineInputBorder(
@@ -44,6 +51,7 @@ class _sign_up_screenState extends State<sign_up_screen> {
           Padding(
             padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
             child: TextFormField(
+              controller: s_passwordController,
               decoration: InputDecoration(
                   hintText: 'PASSWORD',
                   prefixIcon: Icon(Icons.lock),
@@ -55,6 +63,7 @@ class _sign_up_screenState extends State<sign_up_screen> {
           Padding(
             padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
             child: TextFormField(
+              controller: s_confirmPasswordController,
               decoration: InputDecoration(
                   hintText: ' CONFIRM PASSWORD',
                   prefixIcon: Icon(Icons.lock),

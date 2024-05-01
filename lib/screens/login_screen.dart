@@ -11,6 +11,9 @@ class login_screen extends StatefulWidget {
 }
 
 class _login_screenState extends State<login_screen> {
+  var emailController = TextEditingController();
+  var passController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -27,6 +30,7 @@ class _login_screenState extends State<login_screen> {
           Padding(
             padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
             child: TextFormField(
+              controller: emailController,
               decoration: InputDecoration(
                   hintText: 'Email',
                   prefixIcon: Icon(Icons.mail),
@@ -38,6 +42,7 @@ class _login_screenState extends State<login_screen> {
           Padding(
             padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
             child: TextFormField(
+              controller: passController,
               decoration: InputDecoration(
                   hintText: 'PASSWORD',
                   prefixIcon: Icon(Icons.lock),
