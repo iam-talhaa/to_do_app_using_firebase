@@ -50,8 +50,8 @@ class _login_screenState extends State<login_screen> {
           ),
           ElevatedButton(
               onPressed: () {
-                Navigator.of(context).pushReplacement(
-                    MaterialPageRoute(builder: (BuildContext context) {
+                Navigator.of(context)
+                    .push(MaterialPageRoute(builder: (BuildContext context) {
                   return add_Task();
                 }));
               },

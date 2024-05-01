@@ -1,24 +1,28 @@
 import 'package:flutter/material.dart';
 
-class add_task extends StatefulWidget {
-  const add_task({super.key});
+class task_list extends StatefulWidget {
+  const task_list({super.key});
 
   @override
-  State<add_task> createState() => _add_taskState();
+  State<task_list> createState() => _task_listState();
 }
 
-class _add_taskState extends State<add_task> {
+class _task_listState extends State<task_list> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        child: Icon(Icons.add),
+      ),
       appBar: AppBar(
-        title: Text('TASK LIST '),
         actions: [
           IconButton(onPressed: () {}, icon: Icon(Icons.person)),
           IconButton(onPressed: () {}, icon: Icon(Icons.logout))
         ],
+        backgroundColor: Color.fromARGB(171, 174, 135, 148),
+        title: Text('TASK LIST '),
       ),
-      floatingActionButton: FloatingActionButton(onPressed: () {}),
       body: Column(
         children: [],
       ),
