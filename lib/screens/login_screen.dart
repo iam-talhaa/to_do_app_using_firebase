@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:to_do_app/screens/add_task.dart';
 import 'package:to_do_app/screens/sign_up_screen.dart';
+import 'package:to_do_app/screens/task_list.dart';
 
 class login_screen extends StatefulWidget {
   const login_screen({super.key});
@@ -52,7 +53,7 @@ class _login_screenState extends State<login_screen> {
               onPressed: () {
                 Navigator.of(context)
                     .push(MaterialPageRoute(builder: (BuildContext context) {
-                  return add_Task();
+                  return task_list();
                 }));
               },
               child: Text('LOG IN')),
