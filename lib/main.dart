@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:to_do_app/screens/add_task.dart';
 import 'package:to_do_app/screens/loading_screen.dart';
 
 void main() {
@@ -15,7 +16,6 @@ class TO_DO_APP extends StatefulWidget {
 class _TO_DO_APPState extends State<TO_DO_APP> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-        debugShowCheckedModeBanner: false, home: loading_screen());
+    return MaterialApp(debugShowCheckedModeBanner: false, home: add_Task());
   }
 }

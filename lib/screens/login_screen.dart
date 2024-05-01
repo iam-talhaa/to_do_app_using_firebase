@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:to_do_app/screens/add_task.dart';
 import 'package:to_do_app/screens/sign_up_screen.dart';
 
 class login_screen extends StatefulWidget {
@@ -47,7 +48,14 @@ class _login_screenState extends State<login_screen> {
           SizedBox(
             height: 20,
           ),
-          ElevatedButton(onPressed: () {}, child: Text('LOG IN')),
+          ElevatedButton(
+              onPressed: () {
+                Navigator.of(context).pushReplacement(
+                    MaterialPageRoute(builder: (BuildContext context) {
+                  return add_Task();
+                }));
+              },
+              child: Text('LOG IN')),
           Center(
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
