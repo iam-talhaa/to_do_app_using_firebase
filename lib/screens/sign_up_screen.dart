@@ -75,7 +75,15 @@ class _sign_up_screenState extends State<sign_up_screen> {
           SizedBox(
             height: 20,
           ),
-          ElevatedButton(onPressed: () {}, child: Text('SIGN UP')),
+          ElevatedButton(
+              onPressed: () {
+                var fullname = s_fullNameController.text.trim();
+                var email = s_email_Controller.text.trim();
+                var pass = s_passwordController.text.trim();
+                var confirmpass = s_confirmPasswordController.text.trim();
+                print(fullname);
+              },
+              child: Text('SIGN UP')),
         ],
       ),
     );
