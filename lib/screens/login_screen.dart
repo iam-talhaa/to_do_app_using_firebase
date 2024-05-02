@@ -11,9 +11,8 @@ class login_screen extends StatefulWidget {
 }
 
 class _login_screenState extends State<login_screen> {
-  var emailController = TextEditingController();
-  var passController = TextEditingController();
-
+  var s_email_Controller = TextEditingController();
+  var s_passwordController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -30,7 +29,7 @@ class _login_screenState extends State<login_screen> {
           Padding(
             padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
             child: TextFormField(
-              controller: emailController,
+              controller: s_email_Controller,
               decoration: InputDecoration(
                   hintText: 'Email',
                   prefixIcon: Icon(Icons.mail),
@@ -42,7 +41,7 @@ class _login_screenState extends State<login_screen> {
           Padding(
             padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
             child: TextFormField(
-              controller: passController,
+              controller: s_passwordController,
               decoration: InputDecoration(
                   hintText: 'PASSWORD',
                   prefixIcon: Icon(Icons.lock),
@@ -56,6 +55,8 @@ class _login_screenState extends State<login_screen> {
           ),
           ElevatedButton(
               onPressed: () {
+                var email = s_email_Controller.text.trim();
+                var pass = s_email_Controller.text.trim();
                 Navigator.of(context)
                     .push(MaterialPageRoute(builder: (BuildContext context) {
                   return task_list();
