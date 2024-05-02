@@ -57,6 +57,12 @@ class _login_screenState extends State<login_screen> {
               onPressed: () {
                 var email = s_email_Controller.text.trim();
                 var pass = s_email_Controller.text.trim();
+
+                if (email.isEmpty || pass.isEmpty) {
+                  //show error toast
+
+                  return;
+                }
                 Navigator.of(context)
                     .push(MaterialPageRoute(builder: (BuildContext context) {
                   return task_list();
