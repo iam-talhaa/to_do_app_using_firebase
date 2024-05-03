@@ -1,4 +1,6 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
 class sign_up_screen extends StatefulWidget {
   const sign_up_screen({super.key});
@@ -76,12 +78,21 @@ class _sign_up_screenState extends State<sign_up_screen> {
             height: 20,
           ),
           ElevatedButton(
-              onPressed: () {
+              onPressed: () async {
                 var fullname = s_fullNameController.text.trim();
                 var email = s_email_Controller.text.trim();
                 var pass = s_passwordController.text.trim();
                 var confirmpass = s_confirmPasswordController.text.trim();
-                print(fullname);
+
+                FirebaseAuth auth = FirebaseAuth.instance;
+                UserCredential userCredential =
+                    await auth.createUserWithEmailAndPassword(
+                        email: email, password: pass);
+                if (userCredential != null) {
+                  Fluttertoast.showToast(msg: 'SUCESS');
+                } else {
+                  Fluttertoast.showToast(msg: 'ERROR');
+                }
               },
               child: Text('SIGN UP')),
         ],
